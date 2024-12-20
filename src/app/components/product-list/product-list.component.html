@@ -1,0 +1,52 @@
+<main class="py-5">
+  <section id="listado" class="mb-5">
+    <div class="container">
+      <button class="btn btn-warning mb-4" (click)="logout()">Logout</button>
+
+      <h2 class="mb-4">Product List (By Description ASC)</h2>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Category Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of productListByDescription">
+            <th scope="row">{{ product.productId }}</th>
+            <td>{{ product.productCategoryId }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.description }}</td>
+            <td>{{ product.price }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      
+      <h2 class="mb-4">Product List (By Price DESC)</h2>
+      <table class="table table-striped">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Category Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of productListByPrice">
+            <th scope="row">{{ product.productId }}</th>
+            <td>{{ product.productCategoryId }}</td>
+            <td>{{ product.name }}</td>
+            <td>{{ product.description }}</td>
+            <td>{{ product.price }}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</main>
